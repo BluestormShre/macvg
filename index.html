@@ -36,6 +36,7 @@
     />
     <script src="/macvg/app.js"></script>
     <script src="/macvg/modes.js"></script>
+    <link rel="stylesheet" href="games.css" />
   </head>
   <body>
     <div class="overflow-menu shoot" id="overflow-menu">
@@ -48,14 +49,14 @@
     </div>
     <nav class="nav" id="nav">
       <div class="overflowm shoot" id="overflowm">
-        <img src="bars-solid.svg" alt="Menu" class="shoot" />
+        <img src="media/bars-solid.svg" alt="Menu" class="shoot" />
       </div>
       <a
         href="/macvg/"
         class="logo2"
         style="background-color: var(--black-color)"
       >
-        <img src="/macvg/macvg-logo.png" alt="MacVG Logo" />
+        <img src="/macvg/media/macvg-logo.png" alt="MacVG Logo" />
         <a href="new.html" class="nav-link">New</a></a
       ><a href="trending.html" class="nav-link">Trending</a
       ><a href="groups.html" class="nav-link">Groups</a
@@ -98,16 +99,16 @@
     <div class="announce">
       <h2>
         The
-        <a href="/macblog/updates/macvg/2024/may.html" target="_blank"
-          >MacVG May Update</a
+        <a href="/macblog/updates/macvg/2024/june.html" target="_blank"
+          >MacVG June Update</a
         >
-        is here! New games, new features, and more 💡!
+        is here! New games, Side Search, and more 🔎!
         <img src="/maclearn/xmark-solid.svg" alt="X" id="closea" />
       </h2>
     </div>
     <script>
       let clos = document.getElementById("closea");
-      if (localStorage.getItem("macvgcloseeeee")) {
+      if (localStorage.getItem("macvgcloseeeeee")) {
         clos.parentElement.parentElement.style.display = "none";
       }
     </script>
@@ -119,11 +120,51 @@
       <a href="/macvg/"><img src="/MacVG Logo.png" alt="" /></a>
       <a href="/macblog/"><img src="/MacBlog Logo.png" alt="" /></a>
     </div>
+    <div class="modal-background" id="modal">
+      <div class="modal">
+        <h2 class="modal-title">MacVG User Survey</h2>
+        <p class="modal-des">
+          Here's a survey for MacVG's one year anniversary 🎂. With 6 simple
+          questions, this helps us improve your experience and the quality of
+          the site. Thanks. (optional)
+          <a
+            href="https://forms.gle/ytPiCFb862rPQwtx9"
+            target="_blank"
+            class="modal-link"
+            >Survey</a
+          >
+        </p>
+        <button class="modal-close" id="modal-close">
+          <img src="/maclearn/xmark-solid.svg" alt="X" />
+        </button>
+      </div>
+    </div>
+    <script>
+      const mainModal = document.getElementById("modal");
+      const closeModal = document.getElementById("modal-close");
+      if (localStorage.getItem("macvgModal")) {
+        mainModal.style.display = "none";
+      } else {
+        closeModal.addEventListener("click", () => {
+          mainModal.style.display = "none";
+          localStorage.setItem("macvgModal", "closed");
+        });
+      }
+    </script>
     <div class="wrap" id="wrap">
       <header class="homeheader">
         <div class="title" name="Welcome to MacVG!">Welcome to MacVG!</div>
         <div class="sub">
-          A little place where you can have <strong>FUN</strong>!
+          <b
+            style="
+              font-size: 23px;
+              margin-bottom: 15px;
+              display: block;
+              font-style: italic;
+            "
+            >Fun, redefined:</b
+          >
+          Hundreds of games, countless features, endless play!
         </div>
       </header>
       <div class="functions" id="functions">
@@ -132,7 +173,7 @@
           id="searchInput"
           oninput="search()"
           autocomplete="off"
-          placeholder="Search 310+ Games"
+          placeholder="Search 320+ Games"
         /><button class="random" id="random" title="Random Game Selector">
           🎲
         </button>
@@ -143,7 +184,7 @@
           style="position: absolute; top: 0; right: 0"
           title="Clear Favorites"
         >
-          <img src="trash-solid.svg" />
+          <img src="media/trash-solid.svg" />
         </button>
       </div>
       <div class="games-container" id="randomList"></div>
@@ -302,6 +343,9 @@
         <a href="/macvg/projects/basketball-stars/" class="game" id="game26">
           Basketball Stars
         </a>
+        <a href="/macvg/projects/basket-champs/" class="game" id="game365">
+          Basket Champs
+        </a>
         <a href="/macvg/projects/basket-random/" class="game" id="game294">
           Basket Random
         </a>
@@ -312,6 +356,9 @@
 
         <a href="/macvg/projects/bigredbutton/" class="game" id="game29">
           Big Red Button
+        </a>
+        <a href="/macvg/projects/biker-street/" class="game" id="game366">
+          Biker Street
         </a>
         <a href="/macvg/projects/bitcoin-clicker/" class="game" id="game295">
           Bitcoin Clicker
@@ -354,6 +401,9 @@
 
         <a href="/macvg/projects/bobtherobber2/" class="game" id="game36">
           Bob the Robber 2
+        </a>
+        <a href="/macvg/projects/bomb-it-7/" class="game" id="game367">
+          Bomb It 7
         </a>
         <a href="/macvg/projects/bottle-flip/" class="game" id="game351">
           Bottle Flip
@@ -514,6 +564,9 @@
           Doodle Jump
         </a>
 
+        <a href="/macvg/projects/down-the-hill/" class="game" id="game368">
+          Down The Hill
+        </a>
         <a href="/macvg/projects/dragon-vs-bricks/" class="game" id="game73">
           Dragon vs Bricks
         </a>
@@ -555,15 +608,23 @@
         <a href="/macvg/projects/eel-slap/" class="game" id="game82">
           Eel Slap
         </a>
+        <a href="/macvg/projects/eggy-car/" class="game" id="game369">
+          Eggy Car
+        </a>
 
         <a href="/macvg/projects/elastic-face/" class="game" id="game300">
           Elastic Face
         </a>
-
+        <a href="/macvg/projects/endless-truck/" class="game" id="game371">
+          Endless Truck
+        </a>
         <a href="/macvg/projects/endlesswar3/" class="game" id="game84">
           Endless War 3
         </a>
 
+        <a href="/macvg/projects/escaping-prison/" class="game" id="game362">
+          Escaping the Prison
+        </a>
         <a href="/macvg/projects/evil-glitch/" class="game" id="game86">
           Evil Glitch
         </a>
@@ -604,6 +665,9 @@
 
         <a href="/macvg/projects/flashtetris/" class="game" id="game95">
           Flash Tetris
+        </a>
+        <a href="/macvg/projects/fleeing-complex/" class="game" id="game363">
+          Fleeing the Complex
         </a>
 
         <a href="/macvg/projects/fnaw/" class="game" id="game97">
@@ -720,6 +784,13 @@
         </a>
         <a href="/macvg/projects/infinite-soccer/" class="game" id="game336">
           Infinite Soccer
+        </a>
+        <a
+          href="/macvg/projects/infiltrating-airship/"
+          class="game"
+          id="game364"
+        >
+          Infiltrating the Airship
         </a>
         <a href="/macvg/projects/iron-snout/" class="game" id="game304">
           Iron Snout
@@ -1005,6 +1076,9 @@
 
         <a href="/macvg/projects/shuttledeck/" class="game" id="game201">
           SHUTTLEDECK
+        </a>
+        <a href="/macvg/projects/skibidi-strike/" class="game" id="game370">
+          Skibidi Strike
         </a>
 
         <a href="/macvg/projects/sky-car-stunt/" class="game" id="game202">
